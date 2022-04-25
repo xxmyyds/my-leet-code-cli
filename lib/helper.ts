@@ -1,6 +1,10 @@
-import path from 'path'
+import path, { dirname } from 'path'
 import fs from 'fs'
 import chalk from 'chalk'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 export const getAbsolutePath = (p: string) => {
   return path.resolve(__dirname, p)
