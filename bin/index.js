@@ -1,20 +1,18 @@
-/**
- * 实现命令行创建题目
- */
+#! /usr/bin/env node
+
 import { program } from 'commander'
 import { promisify } from 'util'
 import figlet from 'figlet'
 import inquirer from 'inquirer'
-import { Inquirer } from '../types/index'
-import { createTopic } from '../lib/topic'
-import { log } from '../lib/helper'
+import { createTopic } from '../lib/topic.js'
+import { log } from '../lib/helper.js'
 const asyncFiglet = promisify(figlet)
 
 program.version('1.0.0')
 program.option('-n --name <type>', 'output name')
 
 async function printLogo() {
-  let data: any = await asyncFiglet('Leet-Code')
+  let data = await asyncFiglet('Leet-Code')
   log(data)
 }
 
@@ -24,7 +22,7 @@ program
   .action(async (name) => {
     await printLogo()
     log('准备添加新的题目')
-    let res = await inquirer.prompt<Inquirer>([
+    let res = await inquirer.prompt([
       {
         type: 'input',
         name: 'cname',
