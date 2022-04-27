@@ -3,7 +3,7 @@
 
 ## Get Started
 ```zsh
-npm install @xxm7/leet-code-cli -g
+npm install @xxm7/leet-code-cli 
 
 xxm create topic
 ```
