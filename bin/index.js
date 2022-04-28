@@ -6,9 +6,12 @@ import figlet from 'figlet'
 import inquirer from 'inquirer'
 import { createTopic } from '../lib/topic.js'
 import { log } from '../lib/helper.js'
+
 const asyncFiglet = promisify(figlet)
 
-program.version('1.0.0')
+program
+  .version(`@xxm7/leet-code-cli ${process.env.npm_package_version}`)
+  .usage('<command> [options]')
 program.option('-n --name <type>', 'output name')
 
 async function printLogo() {
