@@ -10,7 +10,7 @@
     "xxm": "node  ./bin/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "xxmyyds (https://github.com/xxmyyds/)",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.13.0",
